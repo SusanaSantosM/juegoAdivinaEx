@@ -1,4 +1,7 @@
-
+/**
+ * @author Susana Santos
+ * @version 0.1
+ */
 public class Juego {
   /**
    * Es el número generado para adivinar.
@@ -40,9 +43,18 @@ public class Juego {
 
   private static Juego instance= null;
   private Juego() {}
+  /**
+   * @param numeroAdivinar
+   * @param numeroPropuesto
+   * @param intentosMax
+   * @param puntuacion
+   * @param fallos
+   * @param alias
+   * @param contadorIntentos
+   */
 
   public Juego(int numeroAdivinar, int numeroPropuesto, int intentosMax, int puntuacion,
-               int fallos, String alias, int contadorIntentos, int rondaPartida, int rondaActual) {
+               int fallos, String alias, int contadorIntentos) {
     this.numeroAdivinar = numeroAdivinar;
     this.numeroPropuesto = numeroPropuesto;
     this.intentosMax = intentosMax;
@@ -50,10 +62,11 @@ public class Juego {
     this.fallos = fallos;
     this.alias = alias;
     this.contadorIntentos = contadorIntentos;
-    this.rondaPartida = rondaPartida;
-    this.rondaActual = rondaActual;
   }
-
+  /**
+   * metodo de instancia del Singleton
+   * @return instancia
+   */
   public static Juego getInstance(){
     if (instance == null){
       instance = new Juego();
@@ -117,24 +130,27 @@ public class Juego {
     this.contadorIntentos = contadorIntentos;
   }
 
-  public int getRondaPartida() {
-    return rondaPartida;
-  }
-
-  public void setRondaPartida(int rondaPartida) {
-    this.rondaPartida = rondaPartida;
-  }
-
-  public int getRondaActual() {
-    return rondaActual;
-  }
-
-  public void setRondaActual(int rondaActual) {
-    this.rondaActual = rondaActual;
-  }
-
+  /**
+   * Para poder llamar desde la main.
+   * parte del Singleton.
+   * @param instance
+   */
   public static void setInstance(Juego instance) {
     Juego.instance = instance;
+  }
+
+  /**
+   * Metodo para empezar el juego.
+   * añadimos condiciones del juego.
+   */
+  public void jugar(){
+  }
+
+  /**
+   * Metodo para contabilizar intentos
+   * Registramos los intentos que lleva el jugador.
+   */
+  public void intentos(){
   }
 
 

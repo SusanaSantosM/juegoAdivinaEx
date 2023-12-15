@@ -25,4 +25,11 @@ public class Record {
   public void setPuntajeRecord(int puntuacionRecord) {
     this.puntajeRecord = puntuacionRecord;
   }
+
+  /**
+   * Metodo para registrar los puntajes del jugador.
+   * Se registra segun el alias del jugador.
+   */
+  public void registroRecord(){
+  }
 }
